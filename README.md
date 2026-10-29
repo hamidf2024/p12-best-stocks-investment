@@ -33,12 +33,13 @@ chats/
 project/
   project_metadata.json       project info, Claude Doc link, source links
 website/
-  index.html, project-12.html  project web page (self-contained; same content, two names)
-  build_site.py               regenerates the page from data/model + model/ml_results.json
-  README.md                   how to update and publish
+  project-12.html             SOURCE of the live page hamidf2024.github.io/stocks-investment/project-12.html
+  index.html, build_site.py   stand-alone summary page and its generator (not published)
+  README.md                   how the automatic website publishing works + one-time token setup
 data/model/
   model_results_final.json    every holding: category, financials, rules/ML/final P(2x), loss risk, tier
-.github/workflows/pages.yml   optional GitHub Pages deploy of website/ (enable: Settings -> Pages -> GitHub Actions)
+.github/workflows/sync-website.yml  on push: copies website/project-12.html to the live site (needs SITE_TOKEN secret)
+.github/workflows/pages.yml   optional manual deploy of website/ to this repo's own Pages
 CHANGELOG.md                  dated list of changes
 WORKFLOW_RULES.md             standing rule: local folder -> GitHub -> website after every request
 MANIFEST.sha256               SHA-256 of every file (verify with: sha256sum -c MANIFEST.sha256)
@@ -46,11 +47,11 @@ MANIFEST.sha256               SHA-256 of every file (verify with: sha256sum -c M
 
 ## Working rule
 
-After every request: save to the local GitHub folder first, then to this GitHub repo, then update the website.
+After every request Claude updates this local folder, including the website page `website/project-12.html`. Pushing this repo then updates GitHub and, through `sync-website.yml`, the live website automatically.
 See `WORKFLOW_RULES.md` and the charter's Governance section.
 
 ## Links
 
 - Claude Doc (charter, plan, roadmap): https://claude.ai/artifact/J8rDrPfFf5inPMEuanPE3W
 - Source ChatGPT conversation: https://chatgpt.com/share/6ae35a35-c880-83e8-aea8-858d8aafa7b6
-- Website page: https://hamidf2024.github.io/stocks-investment/project-12.html
+- Website page: https://hamidf2024.github.io/stocks-investment/project-12.html (source: website/project-12.html; site repo: hamidf2024/hamidf2024.github.io)

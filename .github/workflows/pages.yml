@@ -1,8 +1,6 @@
 name: Deploy website to GitHub Pages
+# Manual only: the live page is published by sync-website.yml to hamidf2024.github.io.
 on:
-  push:
-    branches: [main]
-    paths: ["website/**"]
   workflow_dispatch:
 permissions:
   contents: read

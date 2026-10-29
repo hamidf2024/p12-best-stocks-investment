@@ -1,0 +1,39 @@
+name: Publish Project 12 page to hamidf2024.github.io
+# Copies website/project-12.html from this repo to stocks-investment/project-12.html in the
+# hamidf2024/hamidf2024.github.io repo, so the live page updates on every push here.
+# One-time setup: add a repository secret named SITE_TOKEN (fine-grained token with
+# Contents: Read and write on hamidf2024/hamidf2024.github.io).
+on:
+  push:
+    branches: [main]
+    paths: ["website/project-12.html"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v4
+        with:
+          path: p12
+      - name: Check out the website repo
+        uses: actions/checkout@v4
+        with:
+          repository: hamidf2024/hamidf2024.github.io
+          token: ${{ secrets.SITE_TOKEN }}
+          path: site
+      - name: Copy the page and push if it changed
+        run: |
+          cp p12/website/project-12.html site/stocks-investment/project-12.html
+          cd site
+          if git diff --quiet; then
+            echo "Website already up to date."
+            exit 0
+          fi
+          git config user.name "p12 website sync"
+          git config user.email "actions@users.noreply.github.com"
+          git add stocks-investment/project-12.html
+          git commit -m "Project 12 page: sync from p12-best-stocks-investment@${GITHUB_SHA::7}"
+          git push

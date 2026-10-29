@@ -4,11 +4,11 @@ After completing any request in this project, finish in this order:
 
 1. **Local GitHub folder first:** save all relevant information and data into
    `~/Documents/GitHub/p12-best-stocks-investment` (reports, docs, data, scripts, results, chat notes).
-   Update `README.md` and `MANIFEST.sha256`.
-2. **GitHub second:** save the same changes to https://github.com/hamidf2024/p12-best-stocks-investment
-   so the owner can clone them.
-3. **Website third:** update the project website (https://hamidf2024.github.io/stocks-investment/project-12.html).
-   Keep its source in `website/` of the same local folder (`website/build_site.py` regenerates it).
+   Update `README.md`, `CHANGELOG.md` and `MANIFEST.sha256`.
+2. **Website section:** update the related part of the live page source, `website/project-12.html`, in the same folder.
+3. **GitHub + website (automatic):** the owner commits and pushes the folder (GitHub Desktop). The workflow
+   `.github/workflows/sync-website.yml` then copies `website/project-12.html` to `hamidf2024/hamidf2024.github.io`
+   (`stocks-investment/project-12.html`), and the live page https://hamidf2024.github.io/stocks-investment/project-12.html updates.
 
-A request is not complete until all three steps are done, or a step that could not be done is reported with the reason.
+A request is not complete until steps 1 and 2 are done; Claude reports anything that could not be done, with the reason.
 Recorded in the project charter (Governance section) and in the Claude project as `claude/WORKFLOW_RULES.md`.

@@ -158,9 +158,9 @@ A holding moves only on evidence written into the change log, never on price act
 
 **Delivery workflow (standing rule from the sponsor, Oct 29, 2026).** After completing any request in this project, Claude finishes in this order:
 
-1. **Local GitHub folder first:** save all relevant information and data to `~/Documents/GitHub/p12-best-stocks-investment` (reports, docs, data, scripts, results, chat notes), updating `README.md` and the checksum manifest.
-2. **GitHub second:** save the same changes to [hamidf2024/p12-best-stocks-investment](https://github.com/hamidf2024/p12-best-stocks-investment), so the sponsor can clone them.
-3. **Website third:** update the project website, keeping its source in the `website/` folder of the same local GitHub folder.
+1. **Local GitHub folder first:** save all relevant information and data to `~/Documents/GitHub/p12-best-stocks-investment` (reports, docs, data, scripts, results, chat notes), updating `README.md`, `CHANGELOG.md` and the checksum manifest.
+2. **Website section second:** update the related part of the live page source, `website/project-12.html`, in the same folder.
+3. **GitHub and website, automatic:** the sponsor commits and pushes the folder to [hamidf2024/p12-best-stocks-investment](https://github.com/hamidf2024/p12-best-stocks-investment) with GitHub Desktop; the workflow `sync-website.yml` then publishes the page to hamidf2024.github.io/stocks-investment/project-12.html.
 
 A request is not complete until all three steps are done, or a step that could not be done is reported with the reason.
 
