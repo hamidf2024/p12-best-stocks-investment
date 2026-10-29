@@ -42,8 +42,8 @@ Market backdrop at launch: the S&P 500 closed at 7,744 on Oct 28, 2026, near rec
 | # | Deliverable | Format | Status |
 | --- | --- | --- | --- |
 | D1 | Project charter, plan and roadmap | This doc | Done |
-| D2 | 10-category framework + scoring model | This doc, section 3 | Done |
-| D3 | Updated categorized research report | PDF | Done (v2, 23 pages) |
+| D2 | 12-category framework + scoring models | This doc, section 3 | Done |
+| D3 | Updated categorized research report | PDF | Done (v2.1 with trained ML model, 24 pages) |
 | D4 | Quarterly refresh of scores and catalysts | PDF revision | Recurring |
 
 **Success criteria**
@@ -78,11 +78,11 @@ The project's main goal is to find stocks with a high chance of at least doublin
 
 **Doubling-prediction model (ensemble)**
 
-| Component | How it works | Weight in ensemble |
+| Component | How it works | Weight in rules model |
 | --- | --- | --- |
 | Scenario simulation | Bear / base / bull 3-year price multiples (v1 scenarios, 25/50/25), each a lognormal with 25% volatility; adjusted for Q3 results after v1's cutoff | 50% |
 | Fundamentals factor model | Doubling Potential Score: growth 30, valuation headroom 20, financial strength 20, theme tailwind 15, downside risk 15; mapped to probability with a capped logistic | 50% |
-| Tiers | A: P 40%+, FS 70+, bear 0.45x+ · B: P 40%+ otherwise · C: 30–39% · D: 20–29% · E: under 20% | — |
+| Tiers | Applied to the final score (50% rules + 50% trained ML model). A: 30%+, FS 70+, ML loss risk 15% or less · B: 30%+ otherwise · C: 25–29% · D: 18–24% · E: under 18% | — |
 
 **Update (v2.1): trained machine-learning model.** The rules model is now blended 50/50 with a model trained on 66,010 historical cases (690 stocks, 1967–2023 start dates, Yahoo Finance monthly prices). In walk-forward tests on unseen years, its top 10% of picks doubled 31–34% of the time versus an 18–22% base rate (AUC 0.58–0.63); a companion model predicts 50%+ losses (AUC 0.75). Final leaders: APP 46%, NU 40%, VRT 37%, NVDA 36%, AVGO 35%.
 
@@ -155,6 +155,14 @@ A holding moves only on evidence written into the change log, never on price act
 - **Remove**: fraud, restatement, going-concern warning, or the company leaves the theme.
 - **Theme check** each quarter: if a theme's driver weakens (e.g., hyperscaler capex guidance falls two quarters in a row), cut that category's weight in the report.
 - **Diversification guide**: keep any single category to a stated cap of the watchlist so no one theme dominates; ETFs (e.g., ITA for US defense, CIBR-type cyber funds) are listed as lower-risk alternatives.
+
+**Delivery workflow (standing rule from the sponsor, Oct 29, 2026).** After completing any request in this project, Claude finishes in this order:
+
+1. **Local GitHub folder first:** save all relevant information and data to `~/Documents/GitHub/p12-best-stocks-investment` (reports, docs, data, scripts, results, chat notes), updating `README.md` and the checksum manifest.
+2. **GitHub second:** save the same changes to [hamidf2024/p12-best-stocks-investment](https://github.com/hamidf2024/p12-best-stocks-investment), so the sponsor can clone them.
+3. **Website third:** update the project website, keeping its source in the `website/` folder of the same local GitHub folder.
+
+A request is not complete until all three steps are done, or a step that could not be done is reported with the reason.
 
 **KPIs for the project**
 

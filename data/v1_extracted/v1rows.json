@@ -1,0 +1,422 @@
+[
+{
+"theme": "1. Physical AI and robotics",
+"rank": "1",
+"name": "Intuitive Surgical",
+"tk": "ISRG",
+"p2x": "~35%",
+"loss": "<5%",
+"val": "37.3x",
+"gv": "HIGH"
+},
+{
+"theme": "1. Physical AI and robotics",
+"rank": "2",
+"name": "FANUC",
+"tk": "6954",
+"p2x": "~25%",
+"loss": "~5%",
+"val": "23.6x",
+"gv": "Cyclical"
+},
+{
+"theme": "1. Physical AI and robotics",
+"rank": "3",
+"name": "Keyence",
+"tk": "6861",
+"p2x": "~30%",
+"loss": "<5%",
+"val": "33.7x",
+"gv": "Quality"
+},
+{
+"theme": "1. Physical AI and robotics",
+"rank": "4",
+"name": "Rockwell Automation",
+"tk": "ROK",
+"p2x": "~20%",
+"loss": "~5%",
+"val": "29.9x",
+"gv": "Cyclical"
+},
+{
+"theme": "1. Physical AI and robotics",
+"rank": "5",
+"name": "Teradyne",
+"tk": "TER",
+"p2x": "~35%",
+"loss": "~10%",
+"val": "33.4x",
+"gv": "Cyclical"
+},
+{
+"theme": "1. Physical AI and robotics",
+"rank": "6",
+"name": "Yaskawa Electric",
+"tk": "6506",
+"p2x": "~25%",
+"loss": "~10%",
+"val": "19.9x",
+"gv": ""
+},
+{
+"theme": "1. Physical AI and robotics",
+"rank": "7",
+"name": "Symbotic",
+"tk": "SYM",
+"p2x": "~35%",
+"loss": "~25%",
+"val": "56.1x",
+"gv": ""
+},
+{
+"theme": "2. Chips and semiconductors",
+"rank": "1",
+"name": "TSMC",
+"tk": "TSM",
+"p2x": "~40%",
+"loss": "~10%",
+"val": "20.1x",
+"gv": "HIGH"
+},
+{
+"theme": "2. Chips and semiconductors",
+"rank": "2",
+"name": "NVIDIA",
+"tk": "NVDA",
+"p2x": "~50%",
+"loss": "~10%",
+"val": "17.8x",
+"gv": "HIGH"
+},
+{
+"theme": "2. Chips and semiconductors",
+"rank": "3",
+"name": "ASML",
+"tk": "ASML",
+"p2x": "~35%",
+"loss": "~10%",
+"val": "25.1x",
+"gv": "Quality"
+},
+{
+"theme": "2. Chips and semiconductors",
+"rank": "4",
+"name": "Broadcom",
+"tk": "AVGO",
+"p2x": "~45%",
+"loss": "~10%",
+"val": "19.5x",
+"gv": "HIGH"
+},
+{
+"theme": "2. Chips and semiconductors",
+"rank": "5",
+"name": "KLA",
+"tk": "KLAC",
+"p2x": "~30%",
+"loss": "~10%",
+"val": "27.5x",
+"gv": "Quality"
+},
+{
+"theme": "2. Chips and semiconductors",
+"rank": "6",
+"name": "SK hynix",
+"tk": "000660",
+"p2x": "~35%",
+"loss": "~15%",
+"val": "6.6x",
+"gv": "Cyclical"
+},
+{
+"theme": "2. Chips and semiconductors",
+"rank": "7",
+"name": "Micron Technology",
+"tk": "MU",
+"p2x": "~35%",
+"loss": "~20%",
+"val": "5.2x",
+"gv": "Cyclical"
+},
+{
+"theme": "3. Rare and critical materials",
+"rank": "1",
+"name": "Lynas Rare Earths",
+"tk": "LYC",
+"p2x": "~35%",
+"loss": "~20%",
+"val": "22.2x",
+"gv": "HIGH"
+},
+{
+"theme": "3. Rare and critical materials",
+"rank": "2",
+"name": "Albemarle",
+"tk": "ALB",
+"p2x": "~35%",
+"loss": "~20%",
+"val": "9.5x",
+"gv": "Cyclical"
+},
+{
+"theme": "3. Rare and critical materials",
+"rank": "3",
+"name": "Neo Performance",
+"tk": "NEO",
+"p2x": "~35%",
+"loss": "~15%",
+"val": "8.9x",
+"gv": ""
+},
+{
+"theme": "3. Rare and critical materials",
+"rank": "4",
+"name": "Materion",
+"tk": "MTRN",
+"p2x": "~25%",
+"loss": "~10%",
+"val": "28.6x",
+"gv": "Quality"
+},
+{
+"theme": "3. Rare and critical materials",
+"rank": "5",
+"name": "ATI",
+"tk": "ATI",
+"p2x": "~25%",
+"loss": "~10%",
+"val": "28.3x",
+"gv": "Cyclical"
+},
+{
+"theme": "3. Rare and critical materials",
+"rank": "6",
+"name": "MP Materials",
+"tk": "MP",
+"p2x": "~35%",
+"loss": "~30%",
+"val": "14.9x",
+"gv": ""
+},
+{
+"theme": "3. Rare and critical materials",
+"rank": "7",
+"name": "Almonty Industries",
+"tk": "ALM",
+"p2x": "~30%",
+"loss": "~35%",
+"val": "39.1x",
+"gv": ""
+},
+{
+"theme": "4. Biotech and AI",
+"rank": "1",
+"name": "Regeneron",
+"tk": "REGN",
+"p2x": "~30%",
+"loss": "~5%",
+"val": "12.3x",
+"gv": "Quality"
+},
+{
+"theme": "4. Biotech and AI",
+"rank": "2",
+"name": "Schrodinger",
+"tk": "SDGR",
+"p2x": "~30%",
+"loss": "~30%",
+"val": "5.9x",
+"gv": ""
+},
+{
+"theme": "4. Biotech and AI",
+"rank": "3",
+"name": "Insilico Medicine",
+"tk": "3696",
+"p2x": "~30%",
+"loss": "~45%",
+"val": "15.7x",
+"gv": ""
+},
+{
+"theme": "4. Biotech and AI",
+"rank": "4",
+"name": "Tempus AI",
+"tk": "TEM",
+"p2x": "~35%",
+"loss": "~25%",
+"val": "8.9x",
+"gv": "HIGH"
+},
+{
+"theme": "4. Biotech and AI",
+"rank": "5",
+"name": "Recursion",
+"tk": "RXRX",
+"p2x": "~30%",
+"loss": "~45%",
+"val": "",
+"gv": ""
+},
+{
+"theme": "4. Biotech and AI",
+"rank": "6",
+"name": "Generate Biomedicines",
+"tk": "GENB",
+"p2x": "~30%",
+"loss": "~45%",
+"val": "",
+"gv": ""
+},
+{
+"theme": "4. Biotech and AI",
+"rank": "7",
+"name": "Absci",
+"tk": "ABSI",
+"p2x": "~30%",
+"loss": "~45%",
+"val": "",
+"gv": ""
+},
+{
+"theme": "5. Defense",
+"rank": "1",
+"name": "General Dynamics",
+"tk": "GD",
+"p2x": "~15%",
+"loss": "<5%",
+"val": "20.3x",
+"gv": "Steady"
+},
+{
+"theme": "5. Defense",
+"rank": "2",
+"name": "RTX",
+"tk": "RTX",
+"p2x": "~25%",
+"loss": "<5%",
+"val": "25.4x",
+"gv": "Quality"
+},
+{
+"theme": "5. Defense",
+"rank": "3",
+"name": "BAE Systems",
+"tk": "BA.",
+"p2x": "~25%",
+"loss": "<5%",
+"val": "22.4x",
+"gv": "Steady"
+},
+{
+"theme": "5. Defense",
+"rank": "4",
+"name": "Northrop Grumman",
+"tk": "NOC",
+"p2x": "~15%",
+"loss": "<5%",
+"val": "19.1x",
+"gv": "Steady"
+},
+{
+"theme": "5. Defense",
+"rank": "5",
+"name": "Lockheed Martin",
+"tk": "LMT",
+"p2x": "~20%",
+"loss": "<5%",
+"val": "19.8x",
+"gv": "Steady"
+},
+{
+"theme": "5. Defense",
+"rank": "6",
+"name": "L3Harris",
+"tk": "LHX",
+"p2x": "~20%",
+"loss": "<5%",
+"val": "20.9x",
+"gv": "Quality"
+},
+{
+"theme": "5. Defense",
+"rank": "7",
+"name": "Rheinmetall",
+"tk": "RHM",
+"p2x": "~45%",
+"loss": "~20%",
+"val": "22.9x",
+"gv": "HIGH"
+},
+{
+"theme": "6. Defense robotics and autonomy",
+"rank": "1",
+"name": "Teledyne",
+"tk": "TDY",
+"p2x": "~20%",
+"loss": "<5%",
+"val": "27.4x",
+"gv": "Quality"
+},
+{
+"theme": "6. Defense robotics and autonomy",
+"rank": "2",
+"name": "Curtiss-Wright",
+"tk": "CW",
+"p2x": "~25%",
+"loss": "<5%",
+"val": "29.5x",
+"gv": "Quality"
+},
+{
+"theme": "6. Defense robotics and autonomy",
+"rank": "3",
+"name": "AeroVironment",
+"tk": "AVAV",
+"p2x": "~35%",
+"loss": "~25%",
+"val": "37.7x",
+"gv": "HIGH"
+},
+{
+"theme": "6. Defense robotics and autonomy",
+"rank": "4",
+"name": "Huntington Ingalls",
+"tk": "HII",
+"p2x": "~25%",
+"loss": "~10%",
+"val": "14.3x",
+"gv": ""
+},
+{
+"theme": "6. Defense robotics and autonomy",
+"rank": "5",
+"name": "Leonardo DRS",
+"tk": "DRS",
+"p2x": "~30%",
+"loss": "~10%",
+"val": "26.6x",
+"gv": "Quality"
+},
+{
+"theme": "6. Defense robotics and autonomy",
+"rank": "6",
+"name": "Kratos Defense",
+"tk": "KTOS",
+"p2x": "~35%",
+"loss": "~25%",
+"val": "43.1x",
+"gv": ""
+},
+{
+"theme": "6. Defense robotics and autonomy",
+"rank": "7",
+"name": "Elbit Systems",
+"tk": "ESLT",
+"p2x": "~25%",
+"loss": "~20%",
+"val": "48.3x",
+"gv": ""
+}
+]

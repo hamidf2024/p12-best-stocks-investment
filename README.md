@@ -32,8 +32,22 @@ chats/
   raw/claude-export-p12.json.gz   full export incl. every tool input/output
 project/
   project_metadata.json       project info, Claude Doc link, source links
+website/
+  index.html, project-12.html  project web page (self-contained; same content, two names)
+  build_site.py               regenerates the page from data/model + model/ml_results.json
+  README.md                   how to update and publish
+data/model/
+  model_results_final.json    every holding: category, financials, rules/ML/final P(2x), loss risk, tier
+.github/workflows/pages.yml   optional GitHub Pages deploy of website/ (enable: Settings -> Pages -> GitHub Actions)
+CHANGELOG.md                  dated list of changes
+WORKFLOW_RULES.md             standing rule: local folder -> GitHub -> website after every request
 MANIFEST.sha256               SHA-256 of every file (verify with: sha256sum -c MANIFEST.sha256)
 ```
+
+## Working rule
+
+After every request: save to the local GitHub folder first, then to this GitHub repo, then update the website.
+See `WORKFLOW_RULES.md` and the charter's Governance section.
 
 ## Links
 

@@ -1,0 +1,25 @@
+# ---------------- Trained ML model ----------------
+fd = MLR['folds']; oos = MLR['oos']; dd = MLR['data']
+fig, (a1, a2) = plt.subplots(1, 2, figsize=(10, 3.2), dpi=170)
+dec = oos['dec']; xs = list(range(1, 11))
+a1.bar([x - 0.2 for x in xs], [d[0]*100 for d in dec], 0.4, color='#9DB7D5', label='Predicted')
+a1.bar([x + 0.2 for x in xs], [d[1]*100 for d in dec], 0.4, color='#1F4E79', label='Actually doubled')
+a1.axhline(oos['base']*100, color='#888', lw=0.8, ls='--'); a1.text(0.6, oos['base']*100 + 0.8, f"base rate {oos['base']*100:.0f}%", fontsize=7, color='#555')
+a1.set_xticks(xs); a1.set_xlabel('Model score decile (1 = lowest, 10 = highest)', fontsize=8); a1.set_ylabel('% of cases', fontsize=8)
+a1.set_title('Out-of-sample: higher scores doubled more often', fontsize=9, loc='left'); a1.legend(fontsize=7, frameon=False); a1.tick_params(labelsize=7)
+imp = MLR['imp'][:9]; NAMES = {'vol36':'Volatility (3y)','age':'Years listed','mktTrend120':'Market vs 10y trend','mkt36':'Market 3y return','mktVol12':'Market volatility','vol12':'Volatility (1y)','mkt12':'Market 1y return','mom60':'5y momentum','mom36':'3y momentum'}
+a2.barh([NAMES.get(k, k) for k, v in imp][::-1], [v*100 for k, v in imp][::-1], color='#1F6F8B')
+a2.set_xlabel('Share of model split gain (%)', fontsize=8); a2.set_title('What the boosted-tree model relies on', fontsize=9, loc='left'); a2.tick_params(labelsize=7)
+for a in (a1, a2): a.spines[['top', 'right']].set_visible(False)
+plt.tight_layout(); plt.savefig('/tmp/outputs/ml_charts.png'); plt.close()
+s += [P("4. Trained machine-learning model (50% of the final score)", H1),
+      P(f"<b>Data.</b> Monthly total-return prices (Yahoo Finance) for every company in the S&amp;P 500 at any time since 1996 ({dd['universe']} tickers; {dd['fetched_ok']} with data, {dd['delisted_missing']} delisted names unavailable) plus our 117 holdings, and market history back to 1955 (Shiller S&amp;P series). Each example is a stock on a date; the label is whether its price was at least 2x 36 months later. {dd['rows60']:,} examples from {dd['stocks']} stocks, start dates {dd['firstYear']}-{dd['lastYear']}; {dd['pos60']*100:.1f}% doubled.", B),
+      P("<b>Features (17, all known at the time).</b> Stock momentum over 3, 12, 36 and 60 months; volatility (1y, 3y); drawdown from 3-year high; biggest monthly gain; price vs 5-year average; years listed; beta; return vs market; market 1y and 3y return, market vs its 10-year trend, market volatility.", B),
+      P("<b>Models.</b> Gradient-boosted decision trees (120 depth-2 trees, histogram splits) and L2 logistic regression, averaged, then calibrated (Platt scaling on out-of-sample predictions). A second pair trained on 36-month windows scores recent listings (CEG, NXT, NU, TOYO and others). A companion model with the same features predicts a 50%+ loss.", B),
+      P("<b>Testing: walk-forward, never on data the model has seen.</b> Each test period starts 3 years after training ends, so no training label overlaps a test date.", B)]
+rows = [["Test period", "Base rate (doubled)", "AUC trees / blend", "Top 10% picks doubled", "Top 5% doubled", "Bottom 20% doubled", "Brier blend vs base"]]
+for f in fd: rows.append([f['name'], f"{f['base']*100:.0f}%", f"{f['aucG']:.2f} / {f['aucE']:.2f}", f"{f['top10']*100:.0f}%", f"{f['top5']*100:.0f}%", f"{f['bot20']*100:.0f}%", f"{f['brierE']:.3f} vs {f['brierB']:.3f}"])
+s += [tbl(rows, [2.6*inch, 1.0*inch, 1.1*inch, 1.2*inch, 1.0*inch, 1.2*inch, W-8.1*inch]), Spacer(1, 4),
+      Image('/tmp/outputs/ml_charts.png', width=W*0.9, height=W*0.9*0.32),
+      P(f"<b>Reading the results.</b> AUC 0.5 is a coin flip and 1.0 is perfect; 0.58-0.63 means the model separates future doublers from the rest modestly but consistently, in three different eras. Big losses are far more predictable (loss model AUC {MLR['loss_model']['auc60']:.2f}). The model learned mostly that young, volatile stocks double more often, and that doubles become rarer after strong 3-year market runs. Today the S&amp;P 500 is ~85% above its level 3 years ago and well above its 10-year trend, so the model scores almost every stock below its historical base rate.", B),
+      P("<b>Known biases.</b> Survivorship: most delisted companies are missing, which inflates doubling rates and understates loss rates. No fundamentals or valuation: free historical fundamentals were not reachable, so the rules half covers them. The 1967-1985 period has few stocks. Foreign listings are measured in local currency.", NOTE), PageBreak()]
