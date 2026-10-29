@@ -1,0 +1,25 @@
+{
+  "uuid": "01a18819-231b-70f3-a9c7-0a7cd36faacd",
+  "name": "Project 12: Best Stocks for investment",
+  "description": "",
+  "created_at": "2026-10-29T14:38:31.210690Z",
+  "updated_at": "2026-10-29T14:38:31.210690Z",
+  "docs_count": 0,
+  "files_count": 0,
+  "prompt_template": "",
+  "exported_at": "2026-10-29T15:33:33.397Z",
+  "conversations": [
+    {
+      "uuid": "e12c5520-987d-4b9a-9d30-076fb9b4f783",
+      "name": "P12-AI, defense and pandemic stock research",
+      "created_at": "2026-10-29T14:43:10.163124Z",
+      "updated_at": "2026-10-29T15:30:08.928566Z",
+      "messages": 24
+    }
+  ],
+  "claude_doc": {
+    "title": "AI, War & Pandemic-Resilience Stock Research — Project Charter, Plan & Roadmap",
+    "artifact_url": "https://claude.ai/artifact/J8rDrPfFf5inPMEuanPE3W"
+  },
+  "source_chatgpt_share": "https://chatgpt.com/share/6ae35a35-c880-83e8-aea8-858d8aafa7b6"
+}
