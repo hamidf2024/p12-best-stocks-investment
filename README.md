@@ -32,6 +32,10 @@ chats/
   raw/claude-export-p12.json.gz   full export incl. every tool input/output
 project/
   project_metadata.json       project info, Claude Doc link, source links
+research/
+  RESEARCH_FRAMEWORK.md       research program: two paths, five steps, evaluation protocol, gates, backlog
+  experiments.csv             log of every model experiment (EXP-000 = current baseline)
+  templates/                  experiment card, model review, gate review
 website/
   project-12.html             SOURCE of the live page hamidf2024.github.io/stocks-investment/project-12.html
   index.html, build_site.py   stand-alone summary page and its generator (not published)

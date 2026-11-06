@@ -144,6 +144,22 @@ The biggest risk to this watchlist is concentration: categories 1–6 all depend
 | Export controls on chips | Medium | Medium | 1, 2 | Commerce rules | Nvidia already guides with zero China data-center revenue |
 | Data and AI-tool error in this research | Medium | Medium | All | Figures that conflict across sources | Cite primary filings; re-check before any decision |
 
+## Research program
+
+A standing research track looks for a model that beats the current one (EXP-000) at ranking stocks by their chance of doubling in 3 years and flagging likely halvings. Full method: [research/RESEARCH_FRAMEWORK.md](../../research/RESEARCH_FRAMEWORK.md); every experiment is logged in `research/experiments.csv`.
+
+| Factor | Path A: original design | Path B: combine existing strengths |
+| --- | --- | --- |
+| 1. Define success | Same metrics for both: walk-forward AUC, top-decile hit rate, calibration, loss-model AUC, top-decile basket vs S&P 500 | Same, plus limits on data and licensing of borrowed models |
+| 2. Build a baseline | EXP-000 plus momentum, low-volatility and random rankings | Benchmark each existing model family on our task; record pros and cons |
+| 3. Hypothesis | A new mechanism aimed at a specific failure (e.g. a market-regime gate) | A combination that covers individual weaknesses (e.g. price ML + SEC fundamentals) |
+| 4. One change at a time | Ablation of each mechanism; point-in-time data, 36-month embargo, 3+ seeds | Add or remove each borrowed component; compare with source models and a simple average |
+| 5. Refine and scale | Keep what holds across eras; pass an untouched holdout | Drop components that add nothing; scale survivors |
+
+**Promotion rule:** a new model must improve AUC by at least 0.02 in 2 of 3 eras (no era worse by more than 0.01) and raise the top-decile hit rate, without worse calibration or loss-model AUC. **Gates:** R1 plan approved, R2 validation passed, R3 holdout passed, R4 sponsor adopts it as the new baseline.
+
+**First cycle backlog:** R-01 SEC point-in-time fundamentals (B) · R-02 market-regime gate (A) · R-03 time-to-double survival model (A) · R-04 learned weights for the rules model (B) · R-05 survivorship-bias study (data search) · R-06 live scoring of the Oct 2026 predictions (running). The framework is reusable for Forex and options by changing target, horizon and costs.
+
 ## Governance, review rules and KPIs
 
 A holding moves only on evidence written into the change log, never on price action alone.

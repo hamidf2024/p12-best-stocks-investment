@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-06
+- New research program (`research/`): framework with two development paths (A: original design, B: combine strengths
+  of existing models), the same five steps for each, shared evaluation protocol, promotion thresholds, decision gates
+  R1-R4, a first research backlog (R-01 to R-06), experiment log `experiments.csv` (EXP-000 = current baseline) and
+  templates. Built from the ChatGPT "Develop New AI Architecture" conversation, adapted to the 3-year doubling goal.
+- Live page: new "Research program" section and menu link; Downloads links the research framework.
+- Charter: new Research program section.
+
 ## 2026-10-29
 - Live page: the Twelve categories table is now clickable. Each category (and the fund group) opens a ranked table of
   its stocks with final P(2x), ML/rules split, P(halves), financial score, revenue growth, operating margin, P/E and
