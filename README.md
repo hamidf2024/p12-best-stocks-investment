@@ -34,6 +34,7 @@ project/
   project_metadata.json       project info, Claude Doc link, source links
 research/
   RESEARCH_FRAMEWORK.md       research program: two paths, five steps, evaluation protocol, gates, backlog
+  DATA_SOURCES.md             verified data sources: stocks, macro, delisted companies, Alpaca verdict
   experiments.csv             log of every model experiment (EXP-000 = current baseline)
   templates/                  experiment card, model review, gate review
 website/

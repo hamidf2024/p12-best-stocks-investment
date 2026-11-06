@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-06 (data sources)
+- New `research/DATA_SOURCES.md`: verified free sources (SEC EDGAR XBRL with filing dates 2009-, FRED macro, Fama-French
+  factors, Yahoo prices, S&P 500 membership), paid choices for delisted stocks (Sharadar, EODHD, Norgate, CRSP) and the
+  Alpaca verdict.
+- Live page: R-01 and R-02 now "Data ready", R-05 "Needs paid data"; links to the data-sources file.
+
 ## 2026-11-06
 - New research program (`research/`): framework with two development paths (A: original design, B: combine strengths
   of existing models), the same five steps for each, shared evaluation protocol, promotion thresholds, decision gates

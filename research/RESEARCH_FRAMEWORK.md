@@ -108,6 +108,8 @@ A result that meets thresholds on the validation eras still has to pass the unto
 | R-05 | Both | Delisted companies reduce measured doubling odds; quantify survivorship bias | Delisted price history (source to find) | Data search |
 | R-06 | Both | Live tracking: score the Oct 2026 predictions each quarter | Prices only | Running |
 
+Data for every item: `DATA_SOURCES.md` (added 2026-11-06).
+
 ## 10. Cycle and roles
 
 A research cycle takes about 4–6 weeks: plan (gate R1) → run and log experiments → validation review (R2) → holdout (R3)
